@@ -6,6 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
+        System.out.println(args[0]);
+        System.out.println(args[1]);
         /*
         1000, 1001번
         scanner 함수가 기억나지 않았을 때는 웹 화면에서 입력 받은 숫자를 받아와서 계산하는 방법을 생각함.
@@ -54,6 +57,9 @@ public class Main {
          * 15  /  3  (5*3)
          * 16  /  4  (5*2,3*2)
          * 17  /  5  (5*1,3*4)
+         * 18  /     (5*3,3*1)
+         * 19  /  5  (5*2,3*3)
+         * 26  /  8  (5*1,3*7)
          * */
         int n = scanner.nextInt();
         int a=0,b=0;
@@ -65,18 +71,28 @@ public class Main {
         	if(!(n%5==0)){	// 5로 나눴을 때 나머지가 있으면 3으로 나누면 될 것 같다
         		System.out.println("n/3 = "+n/3);
         	}else{System.out.println("n/5 = "+n/5);}
-        }else{
-        	
-        	for(int i=1;i<10;i++){
-        		for(int j=1;j<10;j++){
-        			if((5*i)+(3*j)==n){
-        				System.out.println("i="+i+",j="+j+"-> i+j ="+(i+j));
-        				break;		// continue, break 사용 할 때.. 개념? 알아봐야 함.
-        			}
-        		}
+        } else{
+        	for (n = 3; n < 20; n++) {        	
+	        	boolean isOut = false;
+	        	for(int i=1;i<=n / 5;i++){
+	        		for(int j=1;j<=n / 3;j++){
+	        			if((5*i)+(3*j)==n){
+	        				System.out.println("i="+i+",j="+j+"-> i+j ="+(i+j));
+	        				isOut = true;
+	        				break;		// continue, break 사용 할 때.. 개념? 알아봐야 함.
+	        			}
+	        		}
+	        		
+	        		if (isOut == true) {
+	        			break;
+	        		}
+	        	}
+	        	
+	        	// 위 조건을 타면 -1을 출력 안하고 싶은데 그럼 어떻게 조건을 줘야 할지.. ?
+	        	if (isOut == false) {
+	        		System.out.println("n=" + n);
+	        	}
         	}
-        	// 위 조건을 타면 -1을 출력 안하고 싶은데 그럼 어떻게 조건을 줘야 할지.. ?
-        	System.out.println("-1");
         }
         
 
