@@ -8,8 +8,17 @@ public class Main02 {
 		
 		// 11720¹ø
 		Scanner scanner = new Scanner(System.in);
+		int n,a,sum=0;
+		n = Integer.parseInt(scanner.nextLine());
+		String str = scanner.nextLine();
+		scanner.close();
+		for(int i=0;i<n;i++) {
+			char cha = str.charAt(i);
+			a = Integer.valueOf(String.valueOf(cha));
+			sum=sum+a;
+		}System.out.println(sum);
 		
-		int n = scanner.nextInt();
+		/*int n = scanner.nextInt();
         double m = scanner.nextDouble();
         scanner.close();
         
@@ -20,7 +29,7 @@ public class Main02 {
         	d = (int)(m/c);	
         	m = (int)(m-(d*c));	
         	sum=sum+d;
-        }System.out.println(sum);
+        }System.out.println(sum);*/
         
 	}
 
