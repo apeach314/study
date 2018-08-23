@@ -8,10 +8,12 @@ public class Main02 {
 		
 		// 11720¹ø
 		Scanner scanner = new Scanner(System.in);
+		
 		int n,a,sum=0;
 		n = Integer.parseInt(scanner.nextLine());
 		String str = scanner.nextLine();
 		scanner.close();
+		
 		for(int i=0;i<n;i++) {
 			char cha = str.charAt(i);
 			a = Integer.valueOf(String.valueOf(cha));
