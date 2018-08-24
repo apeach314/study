@@ -32,7 +32,11 @@ public class Main02 {
         	m = (int)(m-(d*c));	
         	sum=sum+d;
         }System.out.println(sum);*/
-        
+		
+		
+		// 1002¹ø ÅÍ·¿
+		System.out.println("2^3 = "+Math.pow(2, 3));
+		System.out.println("4ÀÇ Á¦°ö±Ù = "+Math.sqrt(4));
 	}
 
 }
