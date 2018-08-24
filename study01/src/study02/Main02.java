@@ -20,6 +20,10 @@ public class Main02 {
 			sum=sum+a;
 		}System.out.println(sum);
 		
+		// feel's code
+		System.out.println(str.chars().map(num -> Character.getNumericValue(num)).sum());
+		
+		
 		/*int n = scanner.nextInt();
         double m = scanner.nextDouble();
         scanner.close();
