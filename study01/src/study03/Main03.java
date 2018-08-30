@@ -15,12 +15,13 @@ public class Main03 {
              String[] strA = str1.split(" ");
              String[] strB = str2.split(" ");
              
-             int[] numsA = Arrays.stream(strA).mapToInt(Integer::parseInt).toArray();
+             int[] numsA = Arrays.stream(strA).sorted().mapToInt(Integer::parseInt).toArray();
              int[] numsB = Arrays.stream(strB).mapToInt(Integer::parseInt).toArray();
-             Arrays.sort(numsA);
-             /*for (int number : numsA) {
+             
+//             Arrays.sort(numsA);
+             for (int number : numsA) {
                System.out.println("Number = " + number);
-           }*/
+             }
              
              for(int i=0;i<n;i++){
                     s = s+numsA[i]*numsB[i];
