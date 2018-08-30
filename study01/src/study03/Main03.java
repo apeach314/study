@@ -19,9 +19,9 @@ public class Main03 {
              int[] numsB = Arrays.stream(strB).mapToInt(Integer::parseInt).toArray();
              
 //             Arrays.sort(numsA);
-             for (int number : numsA) {
+             /*for (int number : numsA) {
                System.out.println("Number = " + number);
-             }
+             }*/
              
              for(int i=0;i<n;i++){
                     s = s+numsA[i]*numsB[i];
