@@ -1,6 +1,9 @@
 package study03;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 public class Main03 {
        public static void main(String[] args){
@@ -17,6 +20,13 @@ public class Main03 {
              
              int[] numsA = Arrays.stream(strA).sorted().mapToInt(Integer::parseInt).toArray();
              int[] numsB = Arrays.stream(strB).mapToInt(Integer::parseInt).toArray();
+//             Arrays.sort(numsB, Collections.reverseOrder());
+             
+             List<int[]> list = Arrays.asList(numsB);
+             Collections.reverse(list); // arr 배열은 그대로이며, list는 arr배열의 내림차순으로 저장된다고 하는데 안됨...ㅠㅠ
+             System.out.println(list.get(0)[0]);
+             System.out.println(list.get(0)[1]);
+             System.out.println(list.get(0)[2]);
              
 //             Arrays.sort(numsA);
              /*for (int number : numsA) {
@@ -24,7 +34,7 @@ public class Main03 {
              }*/
              
              for(int i=0;i<n;i++){
-                    s = s+numsA[i]*numsB[i];
+                    s = s+numsA[i]*list.get(0)[i];
              }System.out.println(s);
              
              
