@@ -41,15 +41,43 @@ public class Main04 {
          int m = (int)arrayA[n-1];
          
          for(int i=0; i<n; i++){
-//        	 System.out.println(arrayA[i]/m*100);
         	 sum = sum+arrayA[i]/m*100;
          }
          System.out.println("Æò±Õ = "+sum/n);
          */
-
-         
-          
-          
+    	 
+    	 
+    	 // ¹éÁØ 4344¹ø
+    	 /*
+    	 Scanner scanner = new Scanner(System.in);
+    	 int c = Integer.parseInt(scanner.nextLine());
+    	 String str ;
+    	 String[] strA;
+    	 double[] scoreA;
+    	 double sum, avg,n, x;
+    	 
+    	 for(int i=0; i<c; i++){
+    		 str = scanner.nextLine();
+    		 strA = str.split(" ");
+    		 scoreA = Arrays.stream(strA).mapToDouble(Double::parseDouble).toArray();
+    		 n = scoreA[0]; avg=0; sum=0; x=0;
+    		 
+    		 for(int j=1;j<scoreA.length; j++){
+    			 sum = sum+scoreA[j];
+    		 }
+    		 avg = sum/n;
+    		 
+    		 for(int j=1;j<scoreA.length; j++){
+    			 if(avg<scoreA[j]){
+    				 x++;
+    			 }
+    		 }
+    		 System.out.format("%.3f%n",x/n*100);
+    	 }
+    	 
+    	 scanner.close();
+    	 */
+    	 
           
      }
 }
