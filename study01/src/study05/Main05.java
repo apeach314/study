@@ -39,14 +39,12 @@ public class Main05 {
         int num = scanner.nextInt();
         
         for (int i = 0; i < num; i++) {
-            int r = scanner.nextInt();
+            int m = scanner.nextInt();
             int n = scanner.nextInt();
-            int[][] arrA = new int[r][n];
-            
         }
         scanner.close();
         
-        
+        // nCm
         
 
         
