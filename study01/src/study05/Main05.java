@@ -37,17 +37,37 @@ public class Main05 {
         */
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
+        int m,n ;
         
         for (int i = 0; i < num; i++) {
-            int m = scanner.nextInt();
-            int n = scanner.nextInt();
+             m = scanner.nextInt();
+             n = scanner.nextInt();
+            facto(m,n);
         }
         scanner.close();
         
         // nCm
+        //    n!
+        //  天天天天
+        // (n-m)!*m!
         
-
+    }
+    
+    public static void facto(int m,int n) {
+    	int nfac=1, mfac=1, xfac=1;
+    	int x = n-m;
+    	
+        for(int i=n;i>=1;i--) {
+        	nfac=nfac*i;
+        }
+        for(int i=m;i>=1;i--) {
+        	mfac=mfac*i;
+        }
+        for(int i=x;i>=1;i--) {
+        	xfac=xfac*i;
+        }
         
+        System.out.println(" fac :: "+ nfac/(mfac*xfac));
     }
     
 
