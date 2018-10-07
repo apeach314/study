@@ -72,8 +72,8 @@ public class Main05 {
     
 
     public static void main(String[] args) {
-//        Baekjoon1085();
-        Baekjoon1010();
+        Baekjoon1085();
+        //Baekjoon1010();
         
     }
 
