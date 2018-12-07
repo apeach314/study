@@ -26,7 +26,8 @@ public class Main08 {
 		for (int i=0; i<10; i++) {
 			System.out.println(array[i]);
 		}
-
+		
+		System.out.println((int)'h');
 	}
 
 }
