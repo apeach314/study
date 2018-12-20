@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Main09 {
 	
 	public static void main(String[] args) {
-//		Baekjoon8958();
+		Baekjoon8958();
 //		Baekjoon2920();
 //		Baekjoon11654();
-		Baekjoon10809();
+//		Baekjoon10809();
     }
 		
 	public static void Baekjoon8958() {
@@ -71,10 +71,21 @@ public class Main09 {
 		scanner.close();
 		// 알파벳 소문자 97~122, 26개
 		
+		int[] result = new int[26];
+		for(int i=0; i<result.length; i++) {
+			result[i] = -1;
+		}
+		
+		for(int i=0; i<s.length(); i++) {
+			if(result[s.charAt(i)-'a']==-1) {
+				result[s.charAt(i)-'a']=i;
+			}
+		}
+		
+		for(int i=0; i<result.length; i++){
+			System.out.print(result[i]+" ");
+		}
 		
 	}
 	
-	
-		
-
 }
