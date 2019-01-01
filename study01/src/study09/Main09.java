@@ -75,19 +75,28 @@ public class Main09 {
 		int[] result = new int[26];
 		Arrays.fill(result, -1);
 		
-//		for(int i=0; i<s.length(); i++) {
-//			if(result[s.charAt(i)-'a']==-1) {
-//				result[s.charAt(i)-'a']=i;
-//			}
-//		}
+		for(int i=0; i<s.length(); i++) {
+			if(result[s.charAt(i)-'a']==-1) {
+				result[s.charAt(i)-'a']=i;
+			}
+		}
 		
-		s.chars().map(f -> f-'a').forEach(System.out::println);
-		//Arrays.stream(s).filter(f -> f.charAt(i)-'a' == -1);
+		for(int i=0; i<result.length; i++){
+			System.out.print(result[i]+" ");
+		}
+	}
+	
+	public static void Baekjoon10809_stream() {
 		
-//		for(int i=0; i<result.length; i++){
-//			System.out.print(result[i]+" ");
-//		}
+		Scanner scanner = new Scanner(System.in);
+		String s = scanner.next();
+		scanner.close();
 		
+		int[] result = new int[26];
+		Arrays.fill(result, -1);
+		
+		s.chars().forEach(ch -> result[ch-'a'] = s.indexOf(ch));
+		Arrays.stream(result).forEach(val -> System.out.print(val + " "));
 	}
 	
 }
