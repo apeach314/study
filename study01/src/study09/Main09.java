@@ -89,14 +89,20 @@ public class Main09 {
 	public static void Baekjoon10809_stream() {
 		
 		Scanner scanner = new Scanner(System.in);
-		String s = scanner.next();
+		String s = scanner.next();		// ex) baekjoon
 		scanner.close();
 		
 		int[] result = new int[26];
-		Arrays.fill(result, -1);
+		Arrays.fill(result, -1);		// result 배열을 -1로 전부 채워놓고 
 		
 		s.chars().forEach(ch -> result[ch-'a'] = s.indexOf(ch));
+		// 입력받은 String s를 char 배열로 만들어서 foreach를 쓰는데 
+		// ch는 foreach 변수명이고, 이 변수는 s배열의 첫번째( 예제 baekjoon 이라면 b )
+		// 아스키코드로 계산한( 예를들어 'b'-'a' = 1, result[1] ) 
+		// 배열의 자리에  s의 'b'가 위치한 자리의 숫자를 대입 (s의 'b'는 0번째 자리에 위치. result[1]=0  )
+		
 		Arrays.stream(result).forEach(val -> System.out.print(val + " "));
+		// result 배열을 출력한다.
 	}
 	
 }
