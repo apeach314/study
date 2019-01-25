@@ -17,17 +17,22 @@ public class Main11 {
             for(int j = 1 ; j < 15 ; j++) {
             	apt[i][j] = apt[i][j-1] + apt[i-1][j];
             	// k층 n호에 사는 사람들 수 = k층 n-1호에 하는 사람들 + k-1층 n호에 사는 사람들
-            	// 
+            	System.out.print(apt[i][j] + " ");
             }
+            System.out.println();
         }
 		
         int caseT = scanner.nextInt();          // Test case
+        int results[] = new int[caseT];
         for(int i=0; i<caseT; i++){
            int k = scanner.nextInt(); // k층
            int n = scanner.nextInt(); // n호
-           System.out.println(apt[k][n]);
+           results[i] = apt[k][n-1];
         }
         
+        for(int result: results) {
+            System.out.println(result);
+        }
 
 	}
 
